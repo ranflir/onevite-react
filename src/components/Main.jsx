@@ -4,6 +4,7 @@
 //최상위 태그는 반드시 하나여야만 한다
 import './Main.css';
 
+
 const Main = () => {
   const user = {
     name: '김현제',

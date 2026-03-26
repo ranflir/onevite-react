@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header>
-      <h1>내가 헤더야 짜식아!</h1>
+      <h1>I'm Header</h1>
     </header>
   );
 };
