@@ -1,34 +1,21 @@
 import './App.css';
 import { useState } from 'react';
+import Bulb from './components/Bulb';
+import Counter from './components/Counter';
+
+/*
+1. 자신이 관리하는 state의 값이 리랜더링 되었을때
+2. 자신이 제공받는 props 값이 변경되었을때, 리랜더링
+3. 부모컴포넌트가 리랜더링되면, 자식도 리랜더링이 된다.
+*/
 
 function App() {
   //스테이트값(초기값), 스테이트의 값을 변경하는 상태변화 함수 > (비구조화 할당)구조분해할당으로 표현
-  const [count, setCount] = useState(0);
-  const [light, setLight] = useState('OFF');
   return (
     <>
-      <div>
-        <h1>{light}</h1>
-        <button
-          onClick={() => {
-            setLight(light === 'ON' ? 'OFF' : 'ON');
-          }}
-        >
-          {/* light ON/OFF BUTTON */}
-          {light === 'ON' ? 'LIGHT OFF' : 'LIGHT ON'}
-        </button>
-      </div>
-      <div>
-        <h1>{count}</h1>
-        <button
-          onClick={() => {
-            setCount(count + 1);
-          }}
-        >
-          {' '}
-          +{' '}
-        </button>
-      </div>
+      <Bulb />
+
+      <Counter />
     </>
   );
 }
