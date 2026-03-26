@@ -25,3 +25,7 @@ export default Button;
 
 //cross browsing issue 브라우져 별 스펙이 달라 발생하는 문제
 //Synthetic Event 모든 브라우저에서의 이벤트 객체를 하나로 통일한 형태
+
+
+//state 상태 : 전구(on/off)
+// re-rendering
