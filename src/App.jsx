@@ -1,6 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import Register from './components/Register';
+import HookExam from './components/HookExam';
+
 /*
 1. 자신이 관리하는 state의 값이 리랜더링 되었을때
 2. 자신이 제공받는 props 값이 변경되었을때, 리랜더링
@@ -11,7 +13,7 @@ function App() {
   //스테이트값(초기값), 스테이트의 값을 변경하는 상태변화 함수 > (비구조화 할당)구조분해할당으로 표현
   return (
     <>
-<Register/>
+      <HookExam />
     </>
   );
 }
