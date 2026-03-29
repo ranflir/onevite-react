@@ -1,11 +1,19 @@
 import './App.css';
 import Viewer from './components/Viewer';
 import Controller from './components/Controller';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [input, setInput] = useState('');
 
+  //useEffect 원하는 값이 바뀌었을때만 특정동작을 콜백함수로 실행
+  useEffect(() => {
+    console.log(`count:${count} / input:${input}`);
+  }, [count, input]);
+  //두번째 인수로 들어간 배열에 들어간 값이 바뀌게 되면, 사이드이펙트로서 첫번째 함수로 들어간 콜백함수를 실행
+  //의존성 배열, dependency array
+  //deps
   const onClickButton = (value) => {
     setCount(count + value);
   };
@@ -13,6 +21,15 @@ function App() {
   return (
     <div className="App">
       <h1>Simple Counter</h1>
+      <section>
+        <input
+          value={input}
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+        />
+      </section>
+
       <section>
         <Viewer count={count} />
       </section>
