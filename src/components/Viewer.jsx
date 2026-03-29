@@ -1,8 +1,9 @@
-const Viewer = () => {
+const Viewer = ({ count }) => {
   return (
-    <div>
-      Present Counter :<h1>0</h1>
-    </div>
+    <>
+      <div>Present Counter :</div>
+      <h1>{count}</h1>
+    </>
   );
 };
 
